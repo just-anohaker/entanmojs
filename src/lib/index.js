@@ -10,5 +10,8 @@ const HttpClient = require("./http_client");
  * HttpClient module
  */
 module.exports = {
+    /**
+     * @exports HttpClient
+     */
     HttpClient
 };

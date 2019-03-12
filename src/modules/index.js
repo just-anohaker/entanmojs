@@ -39,15 +39,58 @@ const Transactions = require("./transactions");
  * Node Modules Classes
  */
 module.exports = {
+    /**
+     * @exports Accounts
+     */
     Accounts,
+
+    /**
+     * @exports Blocks
+     */
     Blocks,
+
+    /**
+     * @exports Delegates
+     */
     Delegates,
+
+    /**
+     * @exports Loader
+     */
     Loader,
+
+    /**
+     * @exports LockVote
+     */
     LockVote,
+
+    /**
+     * @exports Multisignatures
+     */
     Multisignatures,
+
+    /**
+     * @exports Peer
+     */
     Peer,
+
+    /**
+     * @exports Server
+     */
     Server,
+
+    /**
+     * @exports Signatures
+     */
     Signatures,
+
+    /**
+     * @exports System
+     */
     System,
+
+    /**
+     * @exports Transactions
+     */
     Transactions,
 };

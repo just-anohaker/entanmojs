@@ -1,7 +1,7 @@
 "use strict";
 
 /// helper for Axios library response handler
-const { responseHandler } = require("./utils");
+const { responseHandler, Result } = require("./utils");
 
 
 /**
@@ -10,5 +10,13 @@ const { responseHandler } = require("./utils");
  * axios response handler helper
  */
 module.exports = {
-    responseHandler
+    /**
+     * @exports responseHandler
+     */
+    responseHandler,
+
+    /**
+     * @exports Result
+     */
+    Result
 };

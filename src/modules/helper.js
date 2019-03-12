@@ -1,6 +1,7 @@
 "use strict";
+const _ = require("lodash");
 
-const { responseHandler } = require("../utils");
+const { responseHandler, Result } = require("../utils");
 
 /**
  * A base class for all module subclass with response helper function
@@ -13,17 +14,17 @@ class Helper {
      * A response handler helper function
      * @async
      * 
-     * @param {Promise<axios.Request>} asyncAPICall - A promise for axios library request
+     * @param {Promise<axios.Request>} reqPromise - A promise for axios library request
      * @param {Function} dataConvert - A function for convert response.data property
      * 
-     * @returns {Object} - Same as the result of responsehandler helper
+     * @returns {Promise<Result>} - see at utils.utils.js -> class Result
      */
-    async _apiHandler(asyncAPICall, dataConvert) {
-        if (typeof dataConvert !== "function") dataConvert = null;
+    async _apiHandler(reqPromise, dataConvert) {
+        if (!_.isFunction(dataConvert)) dataConvert = data => data;
 
-        const result = { done: false };
+        const result = new Result();
         try {
-            const response = await asyncAPICall;
+            const response = await reqPromise;
             const respResult = responseHandler(response);
             if (!respResult.done) {
                 result.error = respResult.error;
@@ -31,7 +32,7 @@ class Helper {
             }
 
             result.done = true;
-            result.data = dataConvert ? dataConvert(respResult.data) : respResult.data;
+            result.data = dataConvert(respResult.data);
         } catch (error) {
             result.error = error.toString();
         }
@@ -39,4 +40,7 @@ class Helper {
     }
 }
 
+/**
+ * @exports Helper
+ */
 module.exports = Helper;

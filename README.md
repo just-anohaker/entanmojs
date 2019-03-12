@@ -1,2 +1,1 @@
-# entanmojs
-The api for entanmo
+# Entanmojs

@@ -55,4 +55,7 @@ class HttpClient {
     }
 }
 
+/**
+ * @exports HttpClient
+ */
 module.exports = HttpClient;
