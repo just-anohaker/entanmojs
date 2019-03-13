@@ -81,3 +81,6 @@ typings/
 
 # npm package-lock file
 package-lock.json
+
+# ignore macosx .DS_Store
+.DS_Store
