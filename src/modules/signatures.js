@@ -8,8 +8,8 @@ const Helper = require("./helper");
 
 const _kAPIRootPath = "/api/signatures/";
 const _kAPIRoutes = {
-    getFee: _kAPIRootPath + "fee",          /// get
-    addSignature: _kAPIRootPath             /// put
+    getFee: _kAPIRootPath + "fee",          /// GET
+    addSignature: _kAPIRootPath             /// PUT
 };
 
 class Signatures extends Helper {

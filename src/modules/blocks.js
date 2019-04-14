@@ -7,15 +7,15 @@ const Helper = require("./helper");
 
 const _kAPIRootPath = "/api/blocks/";
 const _kAPIRoutes = {
-    getBlock: _kAPIRootPath + "get",                /// get
-    getFullBlock: _kAPIRootPath + "full",           /// get
-    getBlocks: _kAPIRootPath,                       /// get
-    getHeight: _kAPIRootPath + "getHeight",         /// get
-    getFee: _kAPIRootPath + "getFee",               /// get
-    getMilestone: _kAPIRootPath + "getMilestone",   /// get
-    getReward: _kAPIRootPath + "getReward",         /// get
-    getSupply: _kAPIRootPath + "getSupply",         /// get
-    getStatus: _kAPIRootPath + "getStatus"          /// get
+    getBlock: _kAPIRootPath + "get",                /// GET
+    getFullBlock: _kAPIRootPath + "full",           /// GET
+    getBlocks: _kAPIRootPath,                       /// GET
+    getHeight: _kAPIRootPath + "getHeight",         /// GET
+    getFee: _kAPIRootPath + "getFee",               /// GET
+    getMilestone: _kAPIRootPath + "getMilestone",   /// GET
+    getReward: _kAPIRootPath + "getReward",         /// GET
+    getSupply: _kAPIRootPath + "getSupply",         /// GET
+    getStatus: _kAPIRootPath + "getStatus"          /// GET
 };
 
 class Blocks extends Helper {

@@ -2,7 +2,7 @@
 
 ## addSignature
 
-**GET** - /api/signatures/
+**PUT** - /api/signatures/
 
 *说明*: 设置二级密码
 
