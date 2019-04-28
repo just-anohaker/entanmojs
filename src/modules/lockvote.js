@@ -31,7 +31,7 @@ class Lockvote extends Helper {
         assert(_.isString(secret), "secret must be string");
         assert(_.isInteger(lockamount), "lockamount must be integer");
         const urlpath = server + _kAPIRoutes.addLockVote;
-        const urldata = { secret, args: { lockamount } };
+        const urldata = { secret, args: { lockamount: "" + lockamount } };
         if (_.isString(publicKey)) urldata.publicKey = publicKey;
         if (_.isString(secondSecret)) urldata.secondSecret = secondSecret;
         if (_.isString(multisigAccountPublicKey)) urldata.multisigAccountPublicKey = multisigAccountPublicKey;
@@ -53,7 +53,7 @@ class Lockvote extends Helper {
             urldata.args = [];
             lockvoteIds.forEach(el => {
                 if (_.isString(el)) {
-                    urldata.args.push(el);
+                    urldata.args.push("" + el);
                 }
             });
         }

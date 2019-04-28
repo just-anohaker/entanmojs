@@ -136,7 +136,7 @@ class Transactions extends Helper {
         assert(_.isInteger(amount), "amount must be integer");
         assert(_.isInteger(expiredTime), "expiredTime must be integer");
         const urlpath = server + kAPIRoutes.addDelayTransactions;
-        const urldata = { secret, recipientId, amount, args: [expiredTime] };
+        const urldata = { secret, recipientId, amount, args: ["" + expiredTime] };
         if (_.isString(publicKey)) urldata.publicKey = publicKey;
         if (_.isString(secondSecret)) urldata.secondSecret = secondSecret;
         if (_.isString(multisigAccountPublicKey)) urldata.multisigAccountPublicKey = multisigAccountPublicKey;
