@@ -9,11 +9,11 @@ const Helper = require("./helper");
 
 const _kAPIRootPath = "/api/lockvote/";
 const _kAPIRoutes = {
-    addLockVote: _kAPIRootPath,
-    removeLockVote: _kAPIRootPath + "remove",
-    getAll: _kAPIRootPath + "all",
-    get: _kAPIRootPath + "get",
-    getById: _kAPIRootPath,                 /// pathname + id
+    addLockVote: _kAPIRootPath,                     /// PUT
+    removeLockVote: _kAPIRootPath + "remove",       /// PUT
+    getAll: _kAPIRootPath + "all",                  /// GET
+    get: _kAPIRootPath + "get",                     /// GET
+    getById: _kAPIRootPath,                         /// GET pathname + id
 };
 
 class Lockvote extends Helper {

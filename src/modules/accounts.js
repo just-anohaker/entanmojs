@@ -15,7 +15,7 @@ const kAPIRoutes = {
     generatePublicKey: kAPIRootPath + "generatePublicKey",     // POST
     getDelegates: kAPIRootPath + "delegates",                  // GET
     getDelegatesFee: kAPIRootPath + "delegates/fee",           // GET
-    addDelegates: kAPIRootPath + "delegates",                  // GET
+    addDelegates: kAPIRootPath + "delegates",                  // PUT
     getAccount: kAPIRootPath,                                  // GET
     newAccount: kAPIRootPath + "new",                          // GET
     accountOnBlockchain: kAPIRootPath + "effectivity",         // GET

@@ -33,7 +33,7 @@
 
 **请求参数**
 
-- `address`[*可选*] - `String`:  锁仓账号地址
+- `address`[**必填**] - `String`:  锁仓账号地址
 - `state`[*可选*] - `Integer`:  锁仓状态，1:锁仓中; 0:已解锁仓
 - `offset`[*可选*] - `Integer`:  偏移量
 - `limit`[*可选*] - `Integer`: 最大数量，上限值100

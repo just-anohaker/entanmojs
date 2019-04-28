@@ -8,14 +8,14 @@ const Helper = require("./helper");
 
 const _kAPIRootPath = "/api/delegates/";
 const _kAPIRoutes = {
-    count: _kAPIRootPath + "count",
-    getVoters: _kAPIRootPath + "voters",
-    getDelegate: _kAPIRootPath + "get",
-    getDelegates: _kAPIRootPath,
-    getFee: _kAPIRootPath + "fee",
-    getForgedByAccount: _kAPIRootPath + "forging/getForgedByAccount",
-    addDelegate: _kAPIRootPath,
-    removeDelegate: _kAPIRootPath + "undelegate"
+    count: _kAPIRootPath + "count",                                     /// GET
+    getVoters: _kAPIRootPath + "voters",                                /// GET
+    getDelegate: _kAPIRootPath + "get",                                 /// GET
+    getDelegates: _kAPIRootPath,                                        /// GET
+    getFee: _kAPIRootPath + "fee",                                      /// GET
+    getForgedByAccount: _kAPIRootPath + "forging/getForgedByAccount",   /// GET
+    addDelegate: _kAPIRootPath,                                         /// PUT
+    removeDelegate: _kAPIRootPath + "undelegate"                        /// PUT
 };
 
 class Delegates extends Helper {
